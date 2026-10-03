@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Panadería y restaurante familiar de barrio en Bogotá. Pan recién hecho, desayunos, almuerzos y mucho sabor casero.">
+<title>Panadería & Restaurante | Sabor casero</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="logo" href="#inicio" aria-label="Inicio">
+    <span class="logo-icon">🏠</span>
+    <span><b>Panadería - Restaurante</b><small>Sabor casero, todos los días</small></span>
+  </a>
+  <button class="hamb" aria-label="Abrir menú">☰</button>
+  <nav>
+    <a class="active" href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#destacados">Destacados</a>
+    <a href="#compartir">Para compartir</a>
+    <a href="#galeria">Galería</a>
+    <a href="#visitanos">Visítanos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button class="header-order" id="openCart">🛒 <span>Mi pedido</span><b id="cartCount">0</b></button>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div><div class="hero-shade"></div>
+  <div class="hero-text">
+    <div class="tiny">♥ &nbsp; HECHO CON CARIÑO</div>
+    <h1>El sabor de<br><em>comer como en casa</em></h1>
+    <p>Pan calientico, cafecito recién hecho y platos preparados con cariño para compartir en familia.</p>
+    <a class="yellow-btn" href="#menu">Ver nuestro menú <b>→</b></a>
+  </div>
+  <div class="hero-scribble">¡Todo<br>recién hecho! <i>⌁</i></div>
+  <div class="dots"><b></b><i></i><i></i><i></i></div>
+</section>
+
+<section class="cream" id="menu">
+  <div class="heading">
+    <div><span>🥖</span><h2>Nuestras categorías</h2></div>
+    <p>Escoge algo rico para hoy</p>
+  </div>
+  <div class="cats">
+    <button data-filter="Panadería"><div class="cat-img bread">🥐🥖</div><strong>Panadería</strong><small>→</small></button>
+    <button data-filter="Desayunos"><div class="cat-img breakfast">🍳🥚</div><strong>Desayunos</strong><small>→</small></button>
+    <button data-filter="Cafés"><div class="cat-img coffee">☕</div><strong>Cafés y bebidas<br>calientes</strong><small>→</small></button>
+    <button data-filter="Comidas"><div class="cat-img sandwich">🥪</div><strong>Sándwiches y<br>comidas rápidas</strong><small>→</small></button>
+    <button data-filter="Almuerzos"><div class="cat-img lunch">🍲</div><strong>Almuerzos</strong><small>→</small></button>
+    <button data-filter="Postres"><div class="cat-img dessert">🍰</div><strong>Postres</strong><small>→</small></button>
+    <button data-filter="Bebidas"><div class="cat-img drink">🧃</div><strong>Bebidas frías</strong><small>→</small></button>
+  </div>
+
+  <div class="menu-bar">
+    <div>
+      <h3>Menú de la casa</h3>
+      <span id="filterLabel">Todos los productos</span>
+    </div>
+    <button class="clear-filter" id="clearFilter">Ver todos</button>
+  </div>
+  <div class="products" id="productGrid"></div>
+</section>
+
+<section class="featured" id="destacados">
+  <div class="heading featured-heading">
+    <div><span>☆</span><h2>Productos destacados</h2></div>
+    <a href="#menu" id="viewAll">Ver todo el menú →</a>
+  </div>
+  <p class="sub">Lo que más nos piden... ¡y lo que más disfrutamos preparar!</p>
+  <div class="featured-grid" id="featuredGrid"></div>
+</section>
+
+<section class="middle" id="compartir">
+  <div class="kitchen-image"><span>👩‍🍳</span><small>Preparado con cariño</small></div>
+  <div class="kitchen-copy">
+    <div class="heart">♡</div>
+    <h2>Nuestra cocina</h2>
+    <p>Nos encanta preparar comida sencilla, rica y reconfortante. Recetas tradicionales, ingredientes de calidad y ese toque casero que hace que uno quiera volver.</p>
+    <strong class="highlight">Porque creemos que la mejor comida<br>siempre se hace en casa.</strong>
+    <div class="values">
+      <span>♨<b>Ingredientes<br>frescos</b></span>
+      <span>♧<b>Recetas<br>tradicionales</b></span>
+      <span>♡<b>Hecho<br>con cariño</b></span>
+    </div>
+  </div>
+  <div class="gallery" id="galeria">
+    <div class="gallery-title"><span>▣</span><div><h2>Galería</h2><p>Un vistazo a nuestro lugar y nuestros sabores</p></div></div>
+    <div class="gallery-grid"><i>🥖</i><i>🏠</i><i>☕</i><i>🥪</i><i>🍳</i><i>🧁</i></div>
+    <button class="brown-btn" id="galleryBtn">Ver más fotos →</button>
+  </div>
+</section>
+
+<section class="visit" id="visitanos">
+  <div class="visit-copy">
+    <div class="heading mini">
+      <div><span>⌖</span><h2>Visítanos</h2></div>
+      <p>Estamos en Bogotá, ven y disfruta de todo lo que tenemos para ti.</p>
+    </div>
+    <div class="visit-data">
+      <div>● <b>Dirección</b><small>Aquí va la dirección</small></div>
+      <div>◷ <b>Horarios</b><small>Lun - Dom · 6:00 a.m. - 9:00 p.m.</small></div>
+    </div>
+  </div>
+  <a class="map" href="https://www.google.com/maps/search/Bogot%C3%A1,+Colombia" target="_blank" rel="noopener">
+    📍<b>Bogotá</b><small>Ver ubicación en Maps ↗</small>
+  </a>
+  <div class="contact" id="contacto">
+    <div class="heading mini">
+      <div><span>☏</span><h2>Contacto</h2></div>
+      <p>¿Tienes alguna pregunta o quieres hacer un pedido?<br>¡Escríbenos!</p>
+    </div>
+    <div class="socials">
+      <button onclick="showToast('Aquí conectaremos el WhatsApp del negocio.')">◉<b>WhatsApp</b><small>Haz tu pedido</small></button>
+      <button onclick="showToast('Aquí conectaremos el Instagram del negocio.')">◎<b>Instagram</b><small>Síguenos</small></button>
+      <button onclick="showToast('Aquí conectaremos el Facebook del negocio.')">f<b>Facebook</b><small>Síguenos</small></button>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><span>🥖</span><p>Panadería - Restaurante &nbsp; | &nbsp; Sabor casero, todos los días</p><div>◉ &nbsp; ◎ &nbsp; f &nbsp; ♪</div></footer>
+
+<!-- CART -->
+<div class="modal-backdrop" id="cartBackdrop"></div>
+<aside class="cart" id="cartPanel" aria-label="Mi pedido">
+  <div class="cart-head"><div><span>🛒</span><h2>Mi pedido</h2></div><button id="closeCart">×</button></div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-empty" id="cartEmpty">Tu pedido está vacío.<br><small>Agrega algo rico del menú ❤️</small></div>
+  <div class="cart-footer">
+    <div><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button id="orderButton">Preparar pedido →</button>
+    <small>Este prototipo no procesa pagos.</small>
+  </div>
+</aside>
+
+<div class="modal-backdrop" id="detailBackdrop"></div>
+<div class="detail-modal" id="detailModal">
+  <button class="detail-close" id="detailClose">×</button>
+  <div id="detailContent"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
